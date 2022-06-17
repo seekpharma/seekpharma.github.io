@@ -1,10 +1,9 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    // Example content paths...
-    "./public/**/*.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
-  mode: "jit",
   presets: [],
   darkMode: "media", // or 'class'
   theme: {
@@ -203,11 +202,9 @@ module.exports = {
       "3xl": "1.5rem",
       full: "9999px",
     },
-    /*
     borderSpacing: ({ theme }) => ({
-      ...theme('spacing'),
+      ...theme("spacing"),
     }),
-    */
     borderWidth: {
       DEFAULT: "1px",
       0: "0px",
@@ -738,7 +735,7 @@ module.exports = {
       8: "8px",
     },
     ringColor: ({ theme }) => ({
-      DEFAULT: theme("colors.blue.500", "#3b82f6"),
+      DEFAULT: theme(`colors.blue.500`, "#3b82f6"),
       ...theme("colors"),
     }),
     ringOffsetColor: ({ theme }) => theme("colors"),
