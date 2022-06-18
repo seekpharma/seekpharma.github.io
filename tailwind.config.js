@@ -42,6 +42,8 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+      "sp-primary": "#62C2B7",
+      "sp-secondary": "#D3F2F2",
     }),
     columns: {
       auto: "auto",
@@ -530,6 +532,7 @@ module.exports = {
       4: "repeat(4, minmax(0, 1fr))",
       5: "repeat(5, minmax(0, 1fr))",
       6: "repeat(6, minmax(0, 1fr))",
+      cards: "auto auto 1fr auto",
     },
     height: ({ theme }) => ({
       auto: "auto",
