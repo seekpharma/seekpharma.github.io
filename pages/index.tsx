@@ -38,9 +38,10 @@ const Index: NextPage = () => {
             </div>
           </div>
         </section>
+
         <section className="h-screen flex flex-col items-center bg-sp-secondary">
           <div className="text-xs text-gray-500 pb-4">WHY SEEKPHARMA?</div>
-          <div className="text-center max-w-md pb-4">
+          <div className="text-xl text-center max-w-md pb-4">
             simplify knowledge exchange between pharmaceutical companies and
             doctors.
           </div>
@@ -59,6 +60,19 @@ const Index: NextPage = () => {
               linkText="Find out more"
               linkUrl="#"
             />
+          </div>
+        </section>
+
+        <section className="h-screen flex flex-col items-center bg-white">
+          <div className="text-xs text-gray-500 pb-4">
+            HOW CAN I PROFIT FROM SEEKPHARMA?
+          </div>
+          <div className="text-xl text-center max-w-md pb-4">
+            Kickstart your Pharmaceutical Products
+          </div>
+          <div className="text-center text-xs text-gray-500">
+            SeekPharma helps you to kickstart your product and deliver valuable
+            product information to our pool of doctors and specialists.
           </div>
         </section>
       </main>
