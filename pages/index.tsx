@@ -4,8 +4,9 @@ import Card from "../components/Card";
 
 const Index: NextPage = () => {
   const openSearchPage = () => {
-    console.log("here");
-    window.open("https://search.seekpharma.com");
+    if (window) {
+      window.open("https://search.seekpharma.com");
+    }
   };
 
   return (
@@ -17,7 +18,7 @@ const Index: NextPage = () => {
       <main className="bg-sp-secondary">
         <section className="h-screen relative bg-sp-primary rounded-b-[100px] sm:rounded-b-[250px]">
           <header className="flex flex-row justify-between items-center p-4">
-            <div>LOGO</div>
+            <div></div>
             <div>
               <button className="bg-white p-2 rounded-md">
                 <span onClick={openSearchPage} className="text-sp-primary">
@@ -72,7 +73,7 @@ const Index: NextPage = () => {
           </div>
         </section>
 
-        <section className="pt-12 pb-12 min-h-screen flex flex-col justify-center items-center bg-white">
+        <section className="pt-12 pb-12 sm:pt-0 sm:pb-0 min-h-screen flex flex-col justify-center items-center bg-white">
           <div className="text-xs text-gray-500 pb-4">
             HOW CAN I PROFIT FROM SEEKPHARMA?
           </div>
@@ -130,7 +131,7 @@ const Index: NextPage = () => {
           </div>
         </section>
 
-        <section className="pt-12 pb-12 min-h-screen flex flex-col items-center bg-gray-100 justify-center">
+        <section className="pt-12 pb-12 sm:pt-0 sm:pb-0 min-h-screen flex flex-col items-center bg-gray-100 justify-center">
           <div className="text-xs text-gray-500 pb-4">WHAT WE BELIEVE IN</div>
           <div className="text-xl text-center max-w-md pb-4">Our Vision</div>
           <div className="text-center text-xs text-gray-500">
@@ -257,6 +258,36 @@ const Index: NextPage = () => {
             </p>
           </div>
         </section>
+
+        <section className="flex justify-center p-12">
+          <div className="grid grid-cols-3 text-xs gap-2 gap-x-10 sm:gap-x-20">
+            <div className="font-medium">Company</div>
+            <div className="font-medium">Product</div>
+            <div className="font-medium">Resources</div>
+            <div>About us</div>
+            <div>Why SeekPharma?</div>
+            <div>Download</div>
+            <div>Careers</div>
+            <div>Enterprise</div>
+            <div>Help Center</div>
+            <div>Blog</div>
+            <div>Customer Stories</div>
+            <div>Guides</div>
+            <div>Press</div>
+            <div>Pricing</div>
+            <div>Partners</div>
+            <div>Brand Guidelines</div>
+            <div>Security</div>
+            <div>Events</div>
+          </div>
+        </section>
+
+        <footer className="grid grid-cols-12 bg-gray-100 h-12 p-3">
+          <div className="text-xs text-gray-500 col-span-3">Status</div>
+          <div className="text-xs text-gray-500 col-span-3">Privacy &amp; Terms</div>
+          <div className="text-xs text-gray-500 col-span-3">Contact Us</div>
+          <div className="text-xs text-gray-500 col-span-3">EN</div>
+        </footer>
       </main>
     </>
   );
