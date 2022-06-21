@@ -3,43 +3,52 @@ import Head from "next/head";
 import Card from "../components/Card";
 
 const Index: NextPage = () => {
+  const openSearchPage = () => {
+    console.log("here");
+    window.open("https://search.seekpharma.com");
+  };
+
   return (
     <>
       <Head>
         <title>Seekpharma</title>
         <meta name="description" content="Seekpharma" />
       </Head>
-      <main>
-        <section className="h-screen relative bg-sp-secondary">
-          <header className="flex flex-col sm:flex-row justify-between">
+      <main className="bg-sp-secondary">
+        <section className="h-screen relative bg-sp-primary rounded-b-[100px] sm:rounded-b-[250px]">
+          <header className="flex flex-row justify-between items-center p-4">
             <div>LOGO</div>
-            <div className="flex flex-row gap-4">
-              <div className="text-base">our vision</div>
-              <div className="text-base">who we are</div>
-              <div className="text-base">contact us</div>
-              <div>
-                <button>Sign in</button>
-              </div>
+            <div>
+              <button className="bg-white p-2 rounded-md">
+                <span onClick={openSearchPage} className="text-sp-primary">
+                  Sign in
+                </span>
+              </button>
             </div>
           </header>
           <div className="h-full flex flex-col justify-center">
             <div className="flex flex-col items-center gap-8">
-              <h2 className="tracking-[10px]">SEEKPHARMA</h2>
+              <h2 className="tracking-[10px] text-xl sm:text-3xl">
+                SEEKPHARMA
+              </h2>
               <p className="text-sm sm:text-base">
-                pharmaceuticals easily find and found
+                <span className="text-white">pharmaceuticals easily</span> find{" "}
+                <span className="text-white">and</span> found
               </p>
-              <input
-                className="p-2 w-full max-w-xl"
-                placeholder="search for any diease of product"
-              />
-              <button className="p-4 bg-white text-sp-primary rounded-lg">
+              <div className="w-full p-4 flex justify-center">
+                <input
+                  className="p-2 w-full max-w-xl rounded-xl border-[3px] border-black"
+                  placeholder="search for any diease or product"
+                />
+              </div>
+              <button className="p-2 bg-white text-sp-primary rounded-lg">
                 Let's get started
               </button>
             </div>
           </div>
         </section>
 
-        <section className="min-h-screen flex flex-col items-center bg-sp-secondary">
+        <section className="pt-16 min-h-screen flex flex-col items-center bg-sp-secondary">
           <div className="text-xs text-gray-500 pb-4">WHY SEEKPHARMA?</div>
           <div className="text-xl text-center max-w-md pb-4">
             simplify knowledge exchange between pharmaceutical companies and
@@ -63,7 +72,7 @@ const Index: NextPage = () => {
           </div>
         </section>
 
-        <section className="min-h-screen flex flex-col justify-center items-center bg-white">
+        <section className="pt-12 pb-12 min-h-screen flex flex-col justify-center items-center bg-white">
           <div className="text-xs text-gray-500 pb-4">
             HOW CAN I PROFIT FROM SEEKPHARMA?
           </div>
@@ -121,7 +130,7 @@ const Index: NextPage = () => {
           </div>
         </section>
 
-        <section className="min-h-screen flex flex-col items-center bg-gray-100 justify-center">
+        <section className="pt-12 pb-12 min-h-screen flex flex-col items-center bg-gray-100 justify-center">
           <div className="text-xs text-gray-500 pb-4">WHAT WE BELIEVE IN</div>
           <div className="text-xl text-center max-w-md pb-4">Our Vision</div>
           <div className="text-center text-xs text-gray-500">
@@ -240,7 +249,7 @@ const Index: NextPage = () => {
             <input className="p-2" placeholder="Enter your company name" />
           </div>
           <div>
-            <input className="p-2"  placeholder="Enter your Email to start" />
+            <input className="p-2" placeholder="Enter your Email to start" />
           </div>
           <div>
             <p className="text-xs text-white">
