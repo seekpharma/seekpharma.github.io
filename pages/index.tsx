@@ -1,10 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useContext, useState } from "react";
+import { useRouter } from "next/router";
+import { useContext, useEffect, useState } from "react";
 import { I18nContext, useTranslation } from "react-i18next";
 import Card from "../components/Card";
 
 const Index: NextPage = () => {
+  const { locales, push, reload, pathname } = useRouter();
   const { i18n } = useContext(I18nContext);
   const { t } = useTranslation();
 
@@ -18,7 +20,11 @@ const Index: NextPage = () => {
   };
 
   const changeLanguage = (event: any) => {
-    i18n.changeLanguage(event.target.value);
+    push(pathname, pathname, { locale: event.target.value }).then((res) => {
+      if (res) {
+        reload();
+      }
+    });
   };
 
   const displayEmail = () => {
@@ -48,8 +54,11 @@ const Index: NextPage = () => {
                 onChange={changeLanguage}
                 className="text-gray-500 bg-sp-primary col-span-3"
               >
-                <option value="de">DE</option>
-                <option value="en">EN</option>
+                {locales?.map((lang) => (
+                  <option key={lang} value={lang}>
+                    {lang.toUpperCase()}
+                  </option>
+                ))}
               </select>
             </div>
             <div>
