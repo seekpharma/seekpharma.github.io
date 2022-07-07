@@ -1,9 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { I18nContext, useTranslation } from "react-i18next";
 import Card from "../components/Card";
 
 const Index: NextPage = () => {
+  const { i18n } = useContext(I18nContext);
+  const { t } = useTranslation();
+
   const [email, setEmail] = useState<string | null>(null);
   const [emailLoading, setEmailLoading] = useState<boolean>(false);
 
@@ -11,6 +15,10 @@ const Index: NextPage = () => {
     if (window) {
       window.open("https://search.seekpharma.com");
     }
+  };
+
+  const changeLanguage = (event: any) => {
+    i18n.changeLanguage(event.target.value);
   };
 
   const displayEmail = () => {
@@ -34,11 +42,20 @@ const Index: NextPage = () => {
       <main className="bg-sp-secondary">
         <section className="pr-0 pl-0 md:pr-6 md:pl-6 pb-6 relative bg-sp-primary rounded-b-[100px] sm:rounded-b-[250px]">
           <header className="flex flex-row justify-between items-center p-4">
-            <div></div>
+            <div>
+              <select
+                value={i18n.language}
+                onChange={changeLanguage}
+                className="text-gray-500 bg-sp-primary col-span-3"
+              >
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+              </select>
+            </div>
             <div>
               <button className="bg-white p-2 rounded-md">
                 <span onClick={openSearchPage} className="text-sp-primary">
-                  Sign in
+                  {t("signIn")}
                 </span>
               </button>
             </div>
@@ -51,7 +68,8 @@ const Index: NextPage = () => {
               <p className="text-sm sm:text-xl w-52 text-center">
                 <span className="text-white">pharmaceuticals easily </span>
                 <span>find </span>
-                <span className="text-white">and</span> found
+                <span className="text-white">and </span>
+                <span>found</span>
               </p>
             </div>
           </div>
@@ -276,9 +294,7 @@ const Index: NextPage = () => {
           </div>
         </section>
 
-        <footer className="flex justify-end bg-gray-100 h-12 p-3">
-          <div className="text-xs text-gray-500 col-span-3">EN</div>
-        </footer>
+        <footer className="flex justify-end bg-gray-100 h-12 p-3"></footer>
       </main>
     </>
   );
