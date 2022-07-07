@@ -26,7 +26,7 @@ const Index: NextPage = () => {
         <meta name="description" content="Seekpharma" />
       </Head>
       <main className="bg-sp-secondary">
-        <section className="h-[50vh] relative bg-sp-primary rounded-b-[100px] sm:rounded-b-[250px]">
+        <section className="pr-0 pl-0 md:pr-6 md:pl-6 pb-6 relative bg-sp-primary rounded-b-[100px] sm:rounded-b-[250px]">
           <header className="flex flex-row justify-between items-center p-4">
             <div></div>
             <div>
@@ -76,7 +76,7 @@ const Index: NextPage = () => {
         </section>
 
         <section className="pt-12 pb-12 md:pt-0 md:pb-0 min-h-screen flex flex-col justify-center items-center bg-white">
-          <div className="text-xs text-gray-500 pb-4">
+          <div className="text-xs text-center text-gray-500 pb-4">
             HOW CAN I PROFIT FROM SEEKPHARMA?
           </div>
           <div className="text-xl text-center max-w-md pb-4">
