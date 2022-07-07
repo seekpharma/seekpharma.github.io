@@ -6,6 +6,7 @@ import Card from "../components/Card";
 
 const Index: NextPage = () => {
   const [email, setEmail] = useState<string | null>(null);
+  const [emailLoading, setEmailLoading] = useState<boolean>(false);
 
   const openSearchPage = () => {
     if (window) {
@@ -14,9 +15,15 @@ const Index: NextPage = () => {
   };
 
   const displayEmail = () => {
-    fetch("/api/getContactEmail")
-      .then((response) => response.json())
-      .then((result) => setEmail(result?.email ?? null));
+    if (!email) {
+      setEmailLoading(true);
+      fetch("/api/getContactEmail")
+        .then((response) => response.json())
+        .then((result) => {
+          setEmailLoading(false);
+          setEmail(result?.email ?? null);
+        });
+    }
   };
 
   return (
@@ -257,7 +264,7 @@ const Index: NextPage = () => {
             </p>
           </div>
           <div>
-            {!email && (
+            {!email && !emailLoading && (
               <button
                 className="p-2 bg-white text-sp-primary rounded-lg"
                 onClick={displayEmail}
@@ -265,6 +272,7 @@ const Index: NextPage = () => {
                 Show email
               </button>
             )}
+            {emailLoading && <span className="text-xs">Loading...</span>}
             {email && <a href={`mailto:${email}`}>{email}</a>}
           </div>
         </section>
