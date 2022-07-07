@@ -1,13 +1,22 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import { useState } from "react";
 import Card from "../components/Card";
 
 const Index: NextPage = () => {
+  const [email, setEmail] = useState<string | null>(null);
+
   const openSearchPage = () => {
     if (window) {
       window.open("https://search.seekpharma.com");
     }
+  };
+
+  const displayEmail = () => {
+    fetch("/api/getContactEmail")
+      .then((response) => response.json())
+      .then((result) => setEmail(result?.email ?? null));
   };
 
   return (
@@ -17,7 +26,7 @@ const Index: NextPage = () => {
         <meta name="description" content="Seekpharma" />
       </Head>
       <main className="bg-sp-secondary">
-        <section className="h-screen relative bg-sp-primary rounded-b-[100px] sm:rounded-b-[250px]">
+        <section className="h-[50vh] relative bg-sp-primary rounded-b-[100px] sm:rounded-b-[250px]">
           <header className="flex flex-row justify-between items-center p-4">
             <div></div>
             <div>
@@ -33,19 +42,11 @@ const Index: NextPage = () => {
               <h2 className="tracking-[10px] text-xl sm:text-3xl">
                 SEEKPHARMA
               </h2>
-              <p className="text-sm sm:text-base">
-                <span className="text-white">pharmaceuticals easily</span> find{" "}
+              <p className="text-sm sm:text-xl w-52 text-center">
+                <span className="text-white">pharmaceuticals easily </span>
+                <span>find </span>
                 <span className="text-white">and</span> found
               </p>
-              <div className="w-full p-4 flex justify-center">
-                <input
-                  className="p-2 w-full max-w-xl rounded-xl border-[3px] border-black"
-                  placeholder="search for any diease or product"
-                />
-              </div>
-              <button className="p-2 bg-white text-sp-primary rounded-lg">
-                Let&apos;s get started
-              </button>
             </div>
           </div>
         </section>
@@ -74,7 +75,7 @@ const Index: NextPage = () => {
           </div>
         </section>
 
-        <section className="pt-12 pb-12 sm:pt-0 sm:pb-0 min-h-screen flex flex-col justify-center items-center bg-white">
+        <section className="pt-12 pb-12 md:pt-0 md:pb-0 min-h-screen flex flex-col justify-center items-center bg-white">
           <div className="text-xs text-gray-500 pb-4">
             HOW CAN I PROFIT FROM SEEKPHARMA?
           </div>
@@ -126,13 +127,9 @@ const Index: NextPage = () => {
               </div>
             </div>
           </div>
-
-          <div>
-            <button>Contact us</button>
-          </div>
         </section>
 
-        <section className="pt-12 pb-12 sm:pt-0 sm:pb-0 min-h-screen flex flex-col items-center bg-gray-100 justify-center">
+        <section className="pt-12 pb-12 md:pt-0 md:pb-0 min-h-screen flex flex-col items-center bg-gray-100 justify-center">
           <div className="text-xs text-gray-500 pb-4">WHAT WE BELIEVE IN</div>
           <div className="text-xl text-center max-w-md pb-4">Our Vision</div>
           <div className="text-center text-xs text-gray-500">
@@ -260,47 +257,19 @@ const Index: NextPage = () => {
             </p>
           </div>
           <div>
-            <input className="p-2" placeholder="Enter your company name" />
-          </div>
-          <div>
-            <input className="p-2" placeholder="Enter your Email to start" />
-          </div>
-          <div>
-            <p className="text-xs text-white">
-              We will contact you as soon as possible.
-            </p>
-          </div>
-        </section>
-
-        <section className="flex justify-center p-12">
-          <div className="grid grid-cols-3 text-xs gap-2 gap-x-10 sm:gap-x-20">
-            <div className="font-medium">Company</div>
-            <div className="font-medium">Product</div>
-            <div className="font-medium">Resources</div>
-            <div>About us</div>
-            <div>Why SeekPharma?</div>
-            <div>Download</div>
-            <div>Careers</div>
-            <div>Enterprise</div>
-            <div>Help Center</div>
-            <div>Blog</div>
-            <div>Customer Stories</div>
-            <div>Guides</div>
-            <div>Press</div>
-            <div>Pricing</div>
-            <div>Partners</div>
-            <div>Brand Guidelines</div>
-            <div>Security</div>
-            <div>Events</div>
+            {!email && (
+              <button
+                className="p-2 bg-white text-sp-primary rounded-lg"
+                onClick={displayEmail}
+              >
+                Show email
+              </button>
+            )}
+            {email && <a href={`mailto:${email}`}>{email}</a>}
           </div>
         </section>
 
-        <footer className="grid grid-cols-12 bg-gray-100 h-12 p-3">
-          <div className="text-xs text-gray-500 col-span-3">Status</div>
-          <div className="text-xs text-gray-500 col-span-3">
-            Privacy &amp; Terms
-          </div>
-          <div className="text-xs text-gray-500 col-span-3">Contact Us</div>
+        <footer className="flex justify-end bg-gray-100 h-12 p-3">
           <div className="text-xs text-gray-500 col-span-3">EN</div>
         </footer>
       </main>
