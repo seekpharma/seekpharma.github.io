@@ -1,3 +1,14 @@
+import {
+  faBinoculars,
+  faClockFour,
+  faEarthEurope,
+  faEnvelope,
+  faFlask,
+  faMagnifyingGlass,
+  faShareNodes,
+  faStethoscope,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -96,12 +107,14 @@ const Index: NextPage = () => {
               title={t("whySection.card1.title")}
               subTitle={t("whySection.card1.subTitle")}
               teaserText={t("whySection.card1.teaserText")}
+              icon={faStethoscope}
               linkText={t("whySection.card1.linkText")}
             />
             <Card
               title={t("whySection.card2.title")}
               subTitle={t("whySection.card2.subTitle")}
               teaserText={t("whySection.card2.teaserText")}
+              icon={faFlask}
               linkText={t("whySection.card2.linkText")}
             />
           </div>
@@ -120,7 +133,12 @@ const Index: NextPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3">
             <div className="grid grid-rows-cards justify-items-center p-8 m-4 gap-2 bg-white max-w-xs">
-              <div className="w-16 h-16 rounded-full bg-sp-primary"></div>
+              <div className="flex justify-center items-center w-16 h-16 rounded-full bg-sp-primary">
+                <FontAwesomeIcon
+                  className="w-8 h-8 rounded-full bg-sp-primary"
+                  icon={faEarthEurope}
+                />
+              </div>
               <div>
                 <p className="font-medium text-center">
                   {t("profitSection.bullets.left.title")}
@@ -134,7 +152,12 @@ const Index: NextPage = () => {
             </div>
 
             <div className="grid grid-rows-cards justify-items-center p-8 m-4 gap-2 bg-white max-w-xs">
-              <div className="w-16 h-16 rounded-full bg-sp-primary"></div>
+              <div className="flex justify-center items-center w-16 h-16 rounded-full bg-sp-primary">
+                <FontAwesomeIcon
+                  className="w-8 h-8 rounded-full bg-sp-primary"
+                  icon={faShareNodes}
+                />
+              </div>
               <div>
                 <p className="font-medium text-center">
                   {t("profitSection.bullets.middle.title")}
@@ -148,7 +171,12 @@ const Index: NextPage = () => {
             </div>
 
             <div className="grid grid-rows-cards justify-items-center p-8 m-4 gap-2 bg-white max-w-xs">
-              <div className="w-16 h-16 rounded-full bg-sp-primary"></div>
+              <div className="flex justify-center items-center w-16 h-16 rounded-full bg-sp-primary">
+                <FontAwesomeIcon
+                  className="w-8 h-8 rounded-full bg-sp-primary"
+                  icon={faEnvelope}
+                />
+              </div>
               <div>
                 <p className="font-medium text-center">
                   {t("profitSection.bullets.right.title")}
@@ -179,7 +207,7 @@ const Index: NextPage = () => {
               <div>
                 <p>{t("visionSection.bullets.left.title")}</p>
               </div>
-              <div className="w-16 h-16 rounded-full bg-black"></div>
+              <FontAwesomeIcon className="w-8 h-8" icon={faBinoculars} />
               <div>
                 <p className="text-xs text-center">
                   {t("visionSection.bullets.left.teaser")}
@@ -190,7 +218,7 @@ const Index: NextPage = () => {
               <div>
                 <p>{t("visionSection.bullets.middle.title")}</p>
               </div>
-              <div className="w-16 h-16 rounded-full bg-black"></div>
+              <FontAwesomeIcon className="w-8 h-8" icon={faClockFour} />
               <div>
                 <p className="text-xs text-center">
                   {t("visionSection.bullets.middle.teaser")}
@@ -201,7 +229,7 @@ const Index: NextPage = () => {
               <div>
                 <p>{t("visionSection.bullets.right.title")}</p>
               </div>
-              <div className="w-16 h-16 rounded-full bg-black"></div>
+              <FontAwesomeIcon className="w-8 h-8" icon={faMagnifyingGlass} />
               <div>
                 <p className="text-xs text-center">
                   {t("visionSection.bullets.right.teaser")}
