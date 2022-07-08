@@ -61,7 +61,11 @@
     }
   },
   "teamSection": {
-    "title": "Unser Team"
+    "title": "Unser Team",
+    "pharmaSpecialist": "Pharmaspezialist",
+    "strategy": "Strategie und Kommerzialisierung",
+    "ux": "UX-Entwicklung",
+    "software": "Fullstack-Software-Entwicklung"
   },
   "contactSection": {
     "title": "Kotakt",

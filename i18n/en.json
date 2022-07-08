@@ -61,7 +61,11 @@
     }
   },
   "teamSection": {
-    "title": "Our team"
+    "title": "Our team",
+    "pharmaSpecialist": "Pharma professional",
+    "strategy": "Strategy and commercialization",
+    "ux": "UX development",
+    "software": "Fullstack software development"
   },
   "contactSection": {
     "title": "Contact",
