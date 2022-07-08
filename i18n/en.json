@@ -1,1 +1,72 @@
-{ "signIn": "Sign in" }
+{
+  "signIn": "Sign in",
+  "header": {
+    "teaser1": "pharmaceuticals easily",
+    "teaser2": "find",
+    "teaser3": "and",
+    "teaser4": "found"
+  },
+  "whySection": {
+    "title": "WHY SEEKPHARMA?",
+    "teaser": "simplify knowledge exchange between pharmaceutical companies and doctors.",
+    "card1": {
+      "title": "Simplified Search,",
+      "subTitle": "Save Research Time",
+      "teaserText": "With a simple search doctors can find information on drug related information such as indication, dosing and clinical research.",
+      "linkText": "Register now"
+    },
+    "card2": {
+      "title": "Improve Product Presence,",
+      "subTitle": "Exploit Potential",
+      "teaserText": "Pharmaceutical companies can easily upload brand information and promotional material onto the platform with the most recent information. Every pharmaceutical product will get a dedicated brand page.",
+      "linkText": "Find out more"
+    }
+  },
+  "profitSection": {
+    "title": "HOW CAN I PROFIT FROM SEEKPHARMA?",
+    "teaser": "Kickstart your Pharmaceutical Products",
+    "subTeaser": "SeekPharma helps you to kickstart your product and deliver valuable product information to our pool of doctors and specialists.",
+    "bullets": {
+      "left": {
+        "title": "Create Brand Page",
+        "teaser": "Upload your Logo, PDFs, Videos or any other media and we will create a responsive product page for your"
+      },
+      "middle": {
+        "title": "Connect with Doctors",
+        "teaser": "Your brand page can easily be found by our pool of doctors and will be suggested in our search engine"
+      },
+      "right": {
+        "title": "Receive Requests",
+        "teaser": "Doctors can order digital and physical marketing material per Email or post"
+      }
+    }
+  },
+  "visionSection": {
+    "title": "WHAT WE BELIEVE IN",
+    "teaser": "Our Vision",
+    "subTeaser": "We want to make it easier for doctors to spend time researching products and still be able to offer a wide range of pharmaceutical products, regardless of the size of the company.",
+    "bullets": {
+      "left": {
+        "title": "WHY",
+        "teaser": "We believe in equal opportunities for all pharmaceutical products to improve the doctors needs"
+      },
+      "middle": {
+        "title": "HOW",
+        "teaser": "We have developed an intuitive search engine to shorten the doctors' research time"
+      },
+      "right": {
+        "title": "WHAT",
+        "teaser": "The search engine return various products and directs the doctors directly to the product page with the most important information"
+      }
+    }
+  },
+  "teamSection": {
+    "title": "Our team"
+  },
+  "contactSection": {
+    "title": "Contact",
+    "teaser": "Chat with us! We will be happy to provide you with a quote and accommodate your needs.",
+    "actionButton": "Show email",
+    "actionLoading": "Loading..."
+  }
+}

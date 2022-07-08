@@ -1,1 +1,72 @@
-{ "signIn": "Einloggen" }
+{
+  "signIn": "Einloggen",
+  "header": {
+    "teaser1": "Pharmazeutika leicht",
+    "teaser2": "suchen",
+    "teaser3": "und",
+    "teaser4": "auffinden"
+  },
+  "whySection": {
+    "title": "WARUM SEEKPHARMA?",
+    "teaser": "Den Wissensaustausch zwischen Pharmaunternehmen und Ärzten vereinfachen.",
+    "card1": {
+      "title": "Vereinfachte Suche,",
+      "subTitle": "Sparen Sie Zeit bei der Suche",
+      "teaserText": "Mit einer einfachen Suche können Ärzte Informationen über Arzneimittel wie Indikationen, Dosierung und klinische Forschung finden.",
+      "linkText": "Jetzt anmelden"
+    },
+    "card2": {
+      "title": "Verbesserung der Produktpräsenz,",
+      "subTitle": "Potenzial ausschöpfen",
+      "teaserText": "Pharmaunternehmen können problemlos Markeninformationen und Werbematerial mit den neuesten Informationen auf die Plattform hochladen. Jedes pharmazeutische Produkt erhält eine eigene Markenseite.",
+      "linkText": "Weitere Informationen"
+    }
+  },
+  "profitSection": {
+    "title": "WIE KANN ICH VON SEEKPHARMA PROFITIEREN?",
+    "teaser": "Starten Sie Ihre pharmazeutischen Produkte",
+    "subTeaser": "Seekpharma hilft Ihnen, Ihr Produkt in Gang zu bringen und wertvolle Produktinformationen an unseren Pool von Ärzten und Spezialisten zu liefern.",
+    "bullets": {
+      "left": {
+        "title": "Markenseite erstellen",
+        "teaser": "Laden Sie Ihr Logo, PDFs, Videos oder andere Medien hoch und wir erstellen eine responsive Produktseite für Sie"
+      },
+      "middle": {
+        "title": "Verbindung Sie sich mit Ärzten",
+        "teaser": "Ihre Markenseite kann von unserem Ärztepool leicht gefunden werden und wird in unserer Suchmaschine vorgeschlagen"
+      },
+      "right": {
+        "title": "Anfragen erhalten",
+        "teaser": "Ärzte können digitales und physisches Marketingmaterial per E-Mail oder Post bestellen"
+      }
+    }
+  },
+  "visionSection": {
+    "title": "WORAN WIR GLAUBEN",
+    "teaser": "Unsere Vision",
+    "subTeaser": "Wir wollen es den Ärzten leichter machen, Zeit für die Produktrecherche aufzuwenden und trotzdem eine breite Palette von Arzneimitteln anbieten, unabhängig von der Größe des Unternehmens.",
+    "bullets": {
+      "left": {
+        "title": "WARUM",
+        "teaser": "Wir glauben an die Chancengleichheit für alle pharmazeutischen Produkte, um die Bedürfnisse der Ärzte zu verbessern"
+      },
+      "middle": {
+        "title": "WIE",
+        "teaser": "Wir haben eine intuitive Suchmaschine entwickelt, um die Recherchezeit der Ärzte zu verkürzen"
+      },
+      "right": {
+        "title": "WAS",
+        "teaser": "Die Suchmaschine liefert verschiedene Produkte und leitet die Ärzte direkt auf die Produktseite mit den wichtigsten Informationen"
+      }
+    }
+  },
+  "teamSection": {
+    "title": "Unser Team"
+  },
+  "contactSection": {
+    "title": "Kotakt",
+    "teaser": "Chatten Sie mit uns! Wir unterbreiten Ihnen gerne ein Angebot und gehen auf Ihre Bedürfnisse ein.",
+    "actionButton": "Email anzeigen",
+    "actionLoading": "Laden..."
+  }
+}

@@ -3,7 +3,7 @@ interface ICardProps {
   subTitle: string;
   teaserText: string;
   linkText: string;
-  linkUrl: string;
+  linkUrl?: string;
 }
 
 const Card = ({
@@ -20,7 +20,11 @@ const Card = ({
       <p className="text-sp-primary">{subTitle}</p>
     </div>
     <div className="pb-4 text-xs text-center text-gray-500">{teaserText}</div>
-    <a href={linkUrl} className="hover:underline underline-offset-8">{linkText}</a>
+    {linkUrl && (
+      <a href={linkUrl} className="hover:underline underline-offset-8">
+        {linkText}
+      </a>
+    )}
   </div>
 );
 

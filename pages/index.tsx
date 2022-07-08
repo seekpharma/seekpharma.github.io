@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { I18nContext, useTranslation } from "react-i18next";
 import Card from "../components/Card";
 
@@ -75,61 +75,60 @@ const Index: NextPage = () => {
                 SEEKPHARMA
               </h2>
               <p className="text-sm sm:text-xl w-52 text-center">
-                <span className="text-white">pharmaceuticals easily </span>
-                <span>find </span>
-                <span className="text-white">and </span>
-                <span>found</span>
+                <span className="text-white">{t("header.teaser1")} </span>
+                <span>{t("header.teaser2")} </span>
+                <span className="text-white">{t("header.teaser3")} </span>
+                <span>{t("header.teaser4")}</span>
               </p>
             </div>
           </div>
         </section>
 
         <section className="pt-16 min-h-screen flex flex-col items-center bg-sp-secondary">
-          <div className="text-xs text-gray-500 pb-4">WHY SEEKPHARMA?</div>
+          <div className="text-xs text-gray-500 pb-4">
+            {t("whySection.title")}
+          </div>
           <div className="text-xl text-center max-w-md pb-4">
-            simplify knowledge exchange between pharmaceutical companies and
-            doctors.
+            {t("whySection.teaser")}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2">
             <Card
-              title="Simplified Search,"
-              subTitle="Save Research Time"
-              teaserText="With a simple search doctors can find information on drug related information such as indication, dosing and clinical research."
-              linkText="Register now"
-              linkUrl="#"
+              title={t("whySection.card1.title")}
+              subTitle={t("whySection.card1.subTitle")}
+              teaserText={t("whySection.card1.teaserText")}
+              linkText={t("whySection.card1.linkText")}
             />
             <Card
-              title="Improve Product Presence,"
-              subTitle="Exploit Potential"
-              teaserText="Pharmaceutical companies can easily upload brand information and promotional material onto the platform with the most recent information. Every pharmaceutical product will get a dedicated brand page."
-              linkText="Find out more"
-              linkUrl="#"
+              title={t("whySection.card2.title")}
+              subTitle={t("whySection.card2.subTitle")}
+              teaserText={t("whySection.card2.teaserText")}
+              linkText={t("whySection.card2.linkText")}
             />
           </div>
         </section>
 
         <section className="pt-12 pb-12 md:pt-0 md:pb-0 min-h-screen flex flex-col justify-center items-center bg-white">
           <div className="text-xs text-center text-gray-500 pb-4">
-            HOW CAN I PROFIT FROM SEEKPHARMA?
+            {t("profitSection.title")}
           </div>
           <div className="text-xl text-center max-w-md pb-4">
-            Kickstart your Pharmaceutical Products
+            {t("profitSection.teaser")}
           </div>
-          <div className="text-center text-xs text-gray-500">
-            SeekPharma helps you to kickstart your product and deliver valuable
-            product information to our pool of doctors and specialists.
+          <div className="text-center text-xs max-w-md text-gray-500">
+            {t("profitSection.subTeaser")}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3">
             <div className="grid grid-rows-cards justify-items-center p-8 m-4 gap-2 bg-white max-w-xs">
               <div className="w-16 h-16 rounded-full bg-sp-primary"></div>
               <div>
-                <p className="font-medium text-center">Create Brand Page</p>
+                <p className="font-medium text-center">
+                  {t("profitSection.bullets.left.title")}
+                </p>
               </div>
               <div>
                 <p className="text-xs text-center">
-                  Upload your Logo, PDFs, Videos or any other media and we will
-                  create a responsive product page for your
+                  {t("profitSection.bullets.left.teaser")}
                 </p>
               </div>
             </div>
@@ -137,12 +136,13 @@ const Index: NextPage = () => {
             <div className="grid grid-rows-cards justify-items-center p-8 m-4 gap-2 bg-white max-w-xs">
               <div className="w-16 h-16 rounded-full bg-sp-primary"></div>
               <div>
-                <p className="font-medium text-center">Connect with Doctors</p>
+                <p className="font-medium text-center">
+                  {t("profitSection.bullets.middle.title")}
+                </p>
               </div>
               <div>
                 <p className="text-xs text-center">
-                  Your brand page can easily be found by our pool of doctors and
-                  will be suggested in our search engine
+                  {t("profitSection.bullets.middle.teaser")}
                 </p>
               </div>
             </div>
@@ -150,12 +150,13 @@ const Index: NextPage = () => {
             <div className="grid grid-rows-cards justify-items-center p-8 m-4 gap-2 bg-white max-w-xs">
               <div className="w-16 h-16 rounded-full bg-sp-primary"></div>
               <div>
-                <p className="font-medium text-center">Receive Requests</p>
+                <p className="font-medium text-center">
+                  {t("profitSection.bullets.right.title")}
+                </p>
               </div>
               <div>
                 <p className="text-xs text-center">
-                  Doctors can order digital and physical marketing material per
-                  Email or post
+                  {t("profitSection.bullets.right.teaser")}
                 </p>
               </div>
             </div>
@@ -163,49 +164,47 @@ const Index: NextPage = () => {
         </section>
 
         <section className="pt-12 pb-12 md:pt-0 md:pb-0 min-h-screen flex flex-col items-center bg-gray-100 justify-center">
-          <div className="text-xs text-gray-500 pb-4">WHAT WE BELIEVE IN</div>
-          <div className="text-xl text-center max-w-md pb-4">Our Vision</div>
-          <div className="text-center text-xs text-gray-500">
-            We want to make it easier for doctors to spend time researching
-            products and still be able to offer a wide range of pharmaceutical
-            products, regardless of the size of the company.
+          <div className="text-xs text-gray-500 pb-4">
+            {t("visionSection.title")}
+          </div>
+          <div className="text-xl text-center max-w-md pb-4">
+            {t("visionSection.teaser")}
+          </div>
+          <div className="text-center text-xs max-w-md text-gray-500">
+            {t("visionSection.subTeaser")}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3">
             <div className="grid grid-rows-3 justify-items-center p-8 m-4 gap-2 max-w-xs">
               <div>
-                <p>WHY</p>
+                <p>{t("visionSection.bullets.left.title")}</p>
               </div>
               <div className="w-16 h-16 rounded-full bg-black"></div>
               <div>
                 <p className="text-xs text-center">
-                  We believe in equal opportunities for all pharmaceutical
-                  products to improve the doctors needs
+                  {t("visionSection.bullets.left.teaser")}
                 </p>
               </div>
             </div>
             <div className="grid grid-rows-3 justify-items-center p-8 m-4 gap-2 max-w-xs">
               <div>
-                <p>HOW</p>
+                <p>{t("visionSection.bullets.middle.title")}</p>
               </div>
               <div className="w-16 h-16 rounded-full bg-black"></div>
               <div>
                 <p className="text-xs text-center">
-                  We have developed an intuitive search engine to shorten the
-                  doctors&apos; research time
+                  {t("visionSection.bullets.middle.teaser")}
                 </p>
               </div>
             </div>
             <div className="grid grid-rows-3 justify-items-center p-8 m-4 gap-2 max-w-xs">
               <div>
-                <p>WHAT</p>
+                <p>{t("visionSection.bullets.right.title")}</p>
               </div>
               <div className="w-16 h-16 rounded-full bg-black"></div>
               <div>
                 <p className="text-xs text-center">
-                  The search engine return various products and directs the
-                  doctors directly to the product page with the most important
-                  information
+                  {t("visionSection.bullets.right.teaser")}
                 </p>
               </div>
             </div>
@@ -213,7 +212,9 @@ const Index: NextPage = () => {
         </section>
 
         <section className="p-8 flex flex-col items-center bg-gray-100 justify-center border-t">
-          <div className="text-xl text-center max-w-md pb-12">Our Team</div>
+          <div className="text-xl text-center max-w-md pb-12">
+            {t("teamSection.title")}
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
             <div className="grid grid-flow-row justify-items-center gap-2">
@@ -281,13 +282,10 @@ const Index: NextPage = () => {
 
         <section className="p-8 flex flex-col gap-5 items-center justify-center bg-sp-primary">
           <div>
-            <p className="text-xl text-white">Contact</p>
+            <p className="text-xl text-white">{t("contactSection.title")}</p>
           </div>
           <div className="pb-4">
-            <p className="text-sm text-white">
-              Chat with us! We will be happy to provide you with a quote and
-              accommodate your needs.
-            </p>
+            <p className="text-sm text-white">{t("contactSection.teaser")}</p>
           </div>
           <div>
             {!email && !emailLoading && (
@@ -295,10 +293,14 @@ const Index: NextPage = () => {
                 className="p-2 bg-white text-sp-primary rounded-lg"
                 onClick={displayEmail}
               >
-                Show email
+                {t("contactSection.actionButton")}
               </button>
             )}
-            {emailLoading && <span className="text-xs">Loading...</span>}
+            {emailLoading && (
+              <span className="text-xs">
+                {t("contactSection.actionLoading")}
+              </span>
+            )}
             {email && <a href={`mailto:${email}`}>{email}</a>}
           </div>
         </section>
